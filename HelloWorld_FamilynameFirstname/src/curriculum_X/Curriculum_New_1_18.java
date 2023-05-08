@@ -35,8 +35,8 @@ public class Curriculum_New_1_18 {
 		int[] numbers;
 		numbers = new int[num5];
 		// Random関数を使う
-	    Random rand = new Random();
 	    
+		Random rand = new Random(5);
 	    for (int i=0; i<num5; i++) {
 	    	numbers[i] = rand.nextInt(100)+1;
 	    	
@@ -47,14 +47,14 @@ public class Curriculum_New_1_18 {
 	}
 	// Q6：引数にQ5で作成したメソッドの返り値を受け取り、受け取った配列の要素の平均値をコンソールに出力するメソッドを作成してください。
 	// ※小数点以下も表示されるようにしてください。
-	public static double random_s (int num5) {
-		int[] randomE = randoms(num5);
+	public static double random_s (int[] numbers) {
+		int[] randomE = numbers;
 		double average = Arrays.stream(randomE).average().getAsDouble();
 		return average;
 	}
 	// Q7：引数にQ6で作成したメソッドの返り値を受け取り、受け取った値が50以上ならばtrueそれ以外はfalseを返しコンソールに出力してください
-	public static boolean isHalf (int num6) {
-		return random_s(num6) >= 50;
+	public static boolean isHalf (double average) {
+		return average >= 50;
 	}
 	public static void main(String[] args) {
 		
@@ -72,10 +72,10 @@ public class Curriculum_New_1_18 {
 		int[] points = randoms(5);
 		System.out.println(Arrays.toString(points));
 		// Q6
-		double random_S = random_s (4);
+		double random_S = random_s (points);
 		System.out.println(random_S);
 		// Q7
-		boolean i = isHalf(5);
+		boolean i = isHalf(random_S);
 		System.out.println(i);
 		
 	}
