@@ -18,11 +18,11 @@ public class Theme1 {
 	private int fast;
 	
 	// コンストラクタを作成
-	public Theme1(String name, double height, int fast) {
+	/*public Theme1(String name, double height, int fast) {
 		this.name = name;
 		this.height = height;
 		this.fast = fast;
-	}
+	}*/
 	// それぞれのセッターを設定
 	public void setName(String name) {
 		this.name = name;
@@ -30,7 +30,7 @@ public class Theme1 {
 	public void setHeight(double height) {
 		this.height = height;
 	}
-	public void setFastt(double fastt) {
+	public void setFast(int fast) {
 		this.fast = fast;
 	}
 	// それぞれのゲッターを設定。
