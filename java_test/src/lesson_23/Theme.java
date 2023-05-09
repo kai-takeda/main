@@ -1,5 +1,7 @@
 package lesson_23;
 
+import java.util.Objects;
+
 public class Theme {
 
 	/*
@@ -16,9 +18,15 @@ public class Theme {
 		// TODO 自動生成されたメソッド・スタブ
 		// インスタンスを作成、その後表示
 		Theme1 theme1 = new Theme1("ライオン", 2.1, 80) ;
-		System.out.println("動物名：" + theme1.getName());
-		System.out.println("体長：" + theme1.getHeight() + "m");
-		System.out.println("速度：" + theme1.getFast() + "km/h");
+		
+		if (Objects.isNull(theme1)) {
+            System.out.println("Object is Null");
+        } else {
+        	System.out.println("動物名：" + theme1.getName());
+    		System.out.println("体長：" + theme1.getHeight() + "m");
+    		System.out.println("速度：" + theme1.getFast() + "km/h");
+        }
+		
 		
 
 	}
