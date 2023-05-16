@@ -27,28 +27,64 @@ import java.util.Random;
 
 public class hero2 {
 	private String name;
+	private int hp;
+	private int mp;
+	private int power;
+	private int speed;
+	private int protect;
 	
 	Random rand = new Random();
 	// セッターを作成
 	public void setName(String name) {
 		this.name = name;
-		
 	}
+	public void setHP(int hp) {
+		this.hp = hp;
+	}
+	public void setMP(int mp) {
+		this.mp = mp;
+	}
+	public void setPower(int power) {
+		this.power = power;
+	}
+	public void setSpeed(int speed) {
+		this.speed = speed;
+	}
+	public void setProtect(int protect) {
+		this.protect = protect;
+	}
+	
 	// ゲッターを作成
 	public String getName() {
 		return this.name;
 	}
+	public int getHP() {
+		return this.hp;
+	}
+	public int getMP() {
+		return this.mp;
+	}
+	public int getPower() {
+		return this.power;
+	}
+	public int getSpeed() {
+		return this.speed;
+	}
+	public int getProtect() {
+		return this.protect;
+	}
 	// 表示する勇者のステータスを作成。
 	public void goFight() {
-		System.out.println("こんにちは「" + this.getName() + "さん");
+		System.out.println("こんにちは「" + this.getName() + "」さん");
 		System.out.println("ステータス");
-		System.out.println("HP：" + rand.nextInt(1000));
-		System.out.println("MP：" + rand.nextInt(1000));
-		System.out.println("攻撃力：" + rand.nextInt(1000));
-		System.out.println("素早さ：" + rand.nextInt(1000));
-		System.out.println("防御力" + rand.nextInt(1000));
+		System.out.println("HP：" + this.getHP());
+		System.out.println("MP：" + this.getMP());
+		System.out.println("攻撃力：" + this.getPower());
+		System.out.println("素早さ：" + this.getSpeed());
+		System.out.println("防御力：" + this.getProtect());
 		System.out.println("");
 		System.out.println("さあ冒険に出かけよう！");
+		System.out.println();
 	}
 
 }
