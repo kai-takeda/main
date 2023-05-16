@@ -47,7 +47,7 @@ public class Main1 {
   */
 
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
+		
 		
 		
 		Scanner scanner = new Scanner(System.in);
@@ -58,7 +58,7 @@ public class Main1 {
 		String[] animal_kinds = allTypes.split(",");
 		for (int i = 0; i < animal_kinds.length; i++) {
 			// 配列をさらに：で区切る。
-			String[] animal_one = animal_kinds[i].split("：");
+			String[] animal_one = animal_kinds[i].split(":");
 			// インスタンス化する
 			animals_kind animal = new animals_kind();
 			// 値をセッターを使って代入する
