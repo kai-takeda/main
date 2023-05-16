@@ -17,12 +17,7 @@ public class Theme1 {
 	private double height;
 	private int fast;
 	
-	// コンストラクタを作成
-	/*public Theme1(String name, double height, int fast) {
-		this.name = name;
-		this.height = height;
-		this.fast = fast;
-	}*/
+	
 	// それぞれのセッターを設定
 	public void setName(String name) {
 		this.name = name;
