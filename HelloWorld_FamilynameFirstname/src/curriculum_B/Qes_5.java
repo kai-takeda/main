@@ -3,7 +3,7 @@ package curriculum_B;
 public class Qes_5 {
 
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
+		
 		
 		/*for文を使用して下記の通りに出力してください																											
 		
@@ -30,10 +30,10 @@ public class Qes_5 {
 				// 最小文字数を２桁に設定、満たない場合は左に0をつける
 				// num1の値が10より小さい場合num1を２桁に
 				if (num1 <10) {
-					System.out.print(String.format("%02d * %02d =%03d", num1, num, num*num1));
+					System.out.print(String.format("%02d * %02d = %03d", num1, num, num*num1));
 				// それ以外の場合num1を３桁に
 				} else {
-					System.out.print(String.format("%03d * %02d =%03d", num1, num, num*num1));
+					System.out.print(String.format("%03d * %02d = %03d", num1, num, num*num1));
 				}
 				// 一番右の||は削除
 				if (num1 == 20) {

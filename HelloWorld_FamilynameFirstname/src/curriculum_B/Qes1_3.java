@@ -11,7 +11,8 @@ import java.util.regex.Pattern;
 public class Qes1_3 {
 
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
+		
+
 										
 		
 		/* Q1, ログイン時の入力チェックシステムを下記条件で作成してください									
@@ -83,10 +84,10 @@ public class Qes1_3 {
 	    	
 
 		    if (Objects.isNull(name) || name.length() <= 0) {
-			    System.out.println("名前を１０文字以内にしてください");
+			    System.out.println("名前を入力してください");
 			    continue;
 		    } else if (name.length()  >= 10) {
-			    System.out.println("名前を入力してください");
+			    System.out.println("名前を１０文字以内にしてください");
 			    continue;
 		    } else if (!result){
 			    System.out.println("半角英数字のみで名前を入力してください");
@@ -148,7 +149,7 @@ public class Qes1_3 {
 			    	}
 			    }
 			// ジャンケンの回数を表示
-			System.out.println("勝つまでにかかった合計回数は"+count+"です");
+			System.out.println("勝つまでにかかった合計回数は"+count+"回です");
 			break;
 		    }
 		} 

@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Qes_7 {
 
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
+		
 		
 		
 		/*N人の生徒の成績を管理するプログラムを下記条件で作成してください										
@@ -15,7 +15,7 @@ public class Qes_7 {
 		・このプログラムの実行は必ず1回以上行われるようにしてください										
 		・出力例を参考にプログラミングを作成してください										
 		*/
-		
+		// double型の変数を宣言
 		double sum0 = 0;
 		double sum1 = 0;
 		double sum2 = 0;
@@ -46,13 +46,14 @@ public class Qes_7 {
 			
 			
 		}
+		// for文で値を取り出し平均点を求める
 		for (int j=1;j<=num; j++) {
 			double average = Arrays.stream(member[j-1]).average().getAsDouble();
 			System.out.println(j+"人目の平均点は"+average+"です。");
 			
 		}
 		System.out.println();
-		
+		// for文で全ての教科の合計点を算出
 		for (int s = 1; s <= num; s++) {
 			sum0 += member[s-1][0];
 			sum1 += member[s-1][1];
@@ -62,6 +63,7 @@ public class Qes_7 {
 			
 			
 		}
+		// 教科ごとの平均点を算出
 		System.out.println("英語の平均点は" + sum0/num + "です。");	
 		System.out.println("数学の平均点は" + sum1/num + "です。");	
 		System.out.println("理科の平均点は" + sum2/num + "です。");	
