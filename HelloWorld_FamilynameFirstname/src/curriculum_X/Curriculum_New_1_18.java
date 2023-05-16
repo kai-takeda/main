@@ -6,26 +6,30 @@ import java.util.Random;
 public class Curriculum_New_1_18 {
 	
 	
-	// Random関数を使う
+	
     
 
 	// Q1：引数に文字列型と整数型をいれてコンソールに「Hello JavaSE 11」と出力するメソッドを作成してください。
 	public static void str_Int(String str, int num) {
 		System.out.println("Hello" + " " + str + " " + num);
+		System.out.println();
 	}
 	// Q2：引数に整数を渡すと渡した値同士を乗算しコンソールに出力するメソッドを作成してください
 	public static void squere (int num1) {
 		System.out.println(num1 * num1);
+		System.out.println();
 	}
 	// Q3：引数として整数の配列を渡すと、受け取った値を順番にコンソールに出力するメソッドを作成してください
 	public static void np (int[] nums) {
 		for (int num2:nums) {
 			System.out.println(num2);
+			System.out.println();
 		}
 	}
 	// Q4：Q2をオーバーロードして引数を小数2つに変更し、引数同士を和算しコンソールに出力してください。
 	public static void squere (double num3, double num4) {
 		System.out.println(num3 + num4);
+		System.out.println();
 	}
 	// Q5：引数に整数を渡すと、1～100までのランダムな数字を引数の回数分格納して
 	// 格納した値を順番にコンソールで出力後、格納した値を返すメソッドを作成してください。
@@ -36,13 +40,13 @@ public class Curriculum_New_1_18 {
 		numbers = new int[num5];
 		// Random関数を使う
 	    
-		Random rand = new Random(5);
+		Random rand = new Random();
 	    for (int i=0; i<num5; i++) {
 	    	numbers[i] = rand.nextInt(100)+1;
 	    	
 	    }
 	    return numbers;
-	    // System.out.println(Arrays.toString(numbers));
+	    
 		
 	}
 	// Q6：引数にQ5で作成したメソッドの返り値を受け取り、受け取った配列の要素の平均値をコンソールに出力するメソッドを作成してください。
@@ -71,12 +75,15 @@ public class Curriculum_New_1_18 {
 		// Q5
 		int[] points = randoms(5);
 		System.out.println(Arrays.toString(points));
+		System.out.println();
 		// Q6
 		double random_S = random_s (points);
 		System.out.println(random_S);
+		System.out.println();
 		// Q7
 		boolean i = isHalf(random_S);
 		System.out.println(i);
+		System.out.println();
 		
 	}
 }
