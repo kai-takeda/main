@@ -27,7 +27,6 @@ name,age,height
 
 問題10：人数の合計を「合計○人です」と出力してください。
 */
-
 public class Person {
 	// インスタンスフィールドを定義
 	public static int count = 0;
