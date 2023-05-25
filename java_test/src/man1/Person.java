@@ -13,6 +13,7 @@ package man1;
 
 問題6：クラスメソッド「printCount」を呼び出してください
 */
+
 public class Person {
 	// インスタンスフィールドを定義
 	public static int count = 0;

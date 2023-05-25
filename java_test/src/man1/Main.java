@@ -23,7 +23,7 @@ public class Main {
 		Person person2 = new Person("山田花子", 22, 1.5, 40);
 		person2.print();
 		// System.out.printlnを用いて人数を表示
-		System.out.println("合計人数は" + Person.count + "です");
+		System.out.println("合計" + Person.count + "人です");
 		// printCountメソッドを用いて人数を表示
 		Person.printCount();
 		
