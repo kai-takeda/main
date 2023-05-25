@@ -6,8 +6,6 @@ import java.util.Scanner;
 public class Qes_6 {
 
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
-		
 		
 		/*入力した商品の残り台数が出力されるシステムを下記の条件で作成してください										
 		・拡張for文・Switch文・条件演算子を使用すること　※普通のif文は使用不可										
@@ -20,15 +18,8 @@ public class Qes_6 {
 		・残り台数は0〜11までのランダムな値が出力されるようにしてください										
 		*/
 		
-		
 		// scannerで入力した値を取得
 		Scanner scanner = new Scanner(System.in);
-		
-		
-		
-		// 、で分ける
-		//scanner.useDelimiter("、");
-		
 		
 		// Random関数を使う
 		Random rand = new Random();
@@ -82,17 +73,10 @@ public class Qes_6 {
                     	System.out.println();
                     }
                 }
-                
-                
             }
         } finally {
             scanner.close();
         }
-		
-		
-		
-			
 
 	}
-
 }

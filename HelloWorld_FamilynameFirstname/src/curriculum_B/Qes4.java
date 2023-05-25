@@ -24,7 +24,6 @@ public class Qes4 {
 		int[] nums = {1, 2, 3, 4, 5, 6, 7, 8, 9};
 		int[] nums1 = {1, 2, 3, 4, 5, 6, 7, 8, 9};
 		
-		
 		// 掛け算の九九をfor文で作成
 		for (int num:nums) {
 			for (int num1:nums1) {
@@ -37,7 +36,6 @@ public class Qes4 {
 			}
 			System.out.println();
 		}
-		
 		
 	}
 
