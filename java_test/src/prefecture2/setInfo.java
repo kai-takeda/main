@@ -5,7 +5,8 @@ public class setInfo {
 	private String prefecture;
 	private String city;
 	private double size;
-	// setter
+	
+	// setterの設定
 	public void setInd(int ind) {
 		this.ind = ind;
 	}
@@ -18,7 +19,8 @@ public class setInfo {
 	public void setSize(double size) {
 		this.size = size;
 	}
-    // getter
+	
+    // getterの設定
 	public int getInd() {
 		return this.ind;
 	}
@@ -31,6 +33,5 @@ public class setInfo {
 	public double getSize() {
 		return this.size;
 	}
-	
 }
 

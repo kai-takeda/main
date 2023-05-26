@@ -21,6 +21,5 @@ public class getOrder {
 			System.out.println("昇順か降順を入力してください。");
 		}
 		return b;
-		
 	}
 }

@@ -1,12 +1,13 @@
 package prefecture1;
 
-import prefecture2.Clips;
+import prefecture2.Fight;
 
 public class Main1 {
-
+	// メイン処理
 	public static void main(String[] args) {
-		Clips c = new Clips();
-		c.g();
+		// clipクラスをインスタス化して使用。
+		Fight f = new Fight();
+		f.g();
 	}
 
 }
