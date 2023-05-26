@@ -6,8 +6,10 @@ import java.util.Map;
 public class getInfo {
 	
 	public Map<Integer, String> getInfos() {
+		
 		// mapクラスを用いて情報を格納する
 		Map<Integer, String> map = new HashMap<>();
+		
 		// インスタンス化
 		setInfo info1 = new setInfo();
 		setInfo info2 = new setInfo();
@@ -26,43 +28,43 @@ public class getInfo {
 		info1.setPrefecture("北海道");
 		info1.setCity("札幌市");
 		info1.setSize(83424);
-		info2.setInd(1);
 		
+		info2.setInd(1);
 		info2.setPrefecture("青森県");
 		info2.setCity("青森市");
 		info2.setSize(9646);
-		info3.setInd(2);
 		
+		info3.setInd(2);
 		info3.setPrefecture("岩手県");
 		info3.setCity("盛岡市");
 		info3.setSize(15275);
-		info4.setInd(3);
 		
+		info4.setInd(3);
 		info4.setPrefecture("宮城県");
 		info4.setCity("仙台市");
 		info4.setSize(7282);
-		info5.setInd(4);
 		
+		info5.setInd(4);
 		info5.setPrefecture("秋田県");
 		info5.setCity("秋田市");
 		info5.setSize(11638);
-		info6.setInd(5);
 		
+		info6.setInd(5);
 		info6.setPrefecture("山形県");
 		info6.setCity("山形市");
 		info6.setSize(9323);
-		info7.setInd(6);
 		
+		info7.setInd(6);
 		info7.setPrefecture("福島県");
 		info7.setCity("福島市");
 		info7.setSize(13784);
-		info8.setInd(7);
 		
+		info8.setInd(7);
 		info8.setPrefecture("茨城県");
 		info8.setCity("水戸市");
 		info8.setSize(6097);
+	
 		info9.setInd(8);
-		
 		info9.setPrefecture("栃木県");
 		info9.setCity("宇都宮市");
 		info9.setSize(6408);
@@ -71,11 +73,12 @@ public class getInfo {
 		info10.setPrefecture("群馬県");
 		info10.setCity("前橋市");
 		info10.setSize(6362);
-		info11.setInd(10);
 		
+		info11.setInd(10);
 		info11.setPrefecture("埼玉県");
 		info11.setCity("さいたま市");
 		info11.setSize(3798);
+		
 		
 		// getterを用いて値を取得しmapに格納
 		map.put(info1.getInd(), info1.getPrefecture() + "," + info1.getCity() + "," + info1.getSize());
