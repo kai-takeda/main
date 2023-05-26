@@ -15,21 +15,21 @@ public class Main {
 	問題6：クラスメソッド「printCount」を呼び出してください
     */
 
-	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
+public static void main(String[] args) {
+		
+		// 人物情報を表示
 		Person person1 = new Person("鈴木太郎", 20, 1.7, 60);
 		person1.print();
 
 		Person person2 = new Person("山田花子", 22, 1.5, 40);
 		person2.print();
-		// System.out.printlnを用いて人数を表示
+		
+		// メッセージを表示
 		System.out.println("合計" + Person.count + "人です");
-		// printCountメソッドを用いて人数を表示
+		
+		// 人数を表示
 		Person.printCount();
 		
-
-
 	}
-	
 
 }

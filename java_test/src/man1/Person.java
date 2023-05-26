@@ -15,6 +15,7 @@ package man1;
 */
 
 public class Person {
+	
 	// インスタンスフィールドを定義
 	public static int count = 0;
 	public String name;
@@ -22,7 +23,7 @@ public class Person {
 	public double height;
 	public double weight;
 	
-	// コンストラクタを定義
+	// プロフィール情報を格納する処理
 	Person(String name, int age, double height, double weight){
 		Person.count++;
 		this.name = name;
@@ -30,18 +31,22 @@ public class Person {
 		this.height = height;
 		this.weight = weight;
 	}
-	// bmiメソッドを定義
+	
+	// bmiの計算をする処理
 	public double bmi(){
 		return this.weight / this.height / this.height;
 	}
-	// 人物の情報を表示するprintメソッドを定義
+	
+	// 人物の情報を表示する処理
 	public void print(){
 		System.out.println("名前は" + this.name + "です");
 		System.out.println("年は" + this.age + "です");
 	}
-	// 生成されたインスタンスの数を表示するprintCountメソッドを定義
+	
+	// 生成されたインスタンスの数を表示する処理
 	public static void printCount() {
-		System.out.println("合計は" + Person.count + "人です");
+		System.out.println("合計" + Person.count + "人です");
 	}
 
 }
+
