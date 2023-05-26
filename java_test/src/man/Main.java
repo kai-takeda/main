@@ -34,6 +34,7 @@ public class Main {
 	 */
 
 	public static void main(String[] args) {
+		
 		// インスタンス化
 		Person person1 = new Person("鈴木太郎", 20, 1.7, 60);
 		
@@ -41,11 +42,12 @@ public class Main {
 		if (Objects.isNull(person1)) {
             System.out.println("Object is Null");
             
+        // 正常に動いた場合
 		} else {
+			
 			// 情報を表示
 		    person1.print();
 		}
-		
 		// 人数を表示
 	    Person.printCount();
 
