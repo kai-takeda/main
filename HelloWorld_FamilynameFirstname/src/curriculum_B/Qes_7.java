@@ -18,10 +18,11 @@ public class Qes_7 {
 		double sum1 = 0;
 		double sum2 = 0;
 		double sum3 = 0;
+		double sum4 = 0;
 		Scanner scanner = new Scanner(System.in);
-
+		
 		// 生徒の人数を入力
-		System.out.println("生徒の人数を入力してください:");
+		System.out.printf("生徒の人数を入力してください:");
 		int num = scanner.nextInt();
 		
 		// 生徒の数の要素を持つ配列を作成
@@ -31,22 +32,22 @@ public class Qes_7 {
 		for (int i = 1; i <= num; i++) {
 			
 			// 英語の処理
-			System.out.println(i + "人目の『英語』の点数を入力してください:");
+			System.out.printf(i + "人目の『英語』の点数を入力してください:");
 			int scoreE = scanner.nextInt();
 			member[i-1][0] = scoreE;
 			
 			// 数学の処理
-			System.out.println(i + "人目の『数学』の点数を入力してください:");
+			System.out.printf(i + "人目の『数学』の点数を入力してください:");
 			int scoreM = scanner.nextInt();
 			member[i-1][1] = scoreM;
 			
 			// 理科の処理
-			System.out.println(i + "人目の『理科』の点数を入力してください:");
+			System.out.printf(i + "人目の『理科』の点数を入力してください:");
 			int scoreS = scanner.nextInt();
 			member[i-1][2] = scoreS;
 			
 			// 社会の処理
-			System.out.println(i + "人目の『社会』の点数を入力してください:");
+			System.out.printf(i + "人目の『社会』の点数を入力してください:");
 			int scoreJ = scanner.nextInt();
 			member[i-1][3] = scoreJ;
 			
@@ -73,5 +74,14 @@ public class Qes_7 {
 		System.out.println("理科の平均点は" + sum2 / num + "です。");
 		System.out.println("社会の平均点は" + sum3 / num + "です。");
 		System.out.println();
+		
+		// 全テストの平均点算出
+		for (int r = 1; r <= num; r++) {
+			for (int u = 0; u < 4; u++) {
+				sum4 += member[r-1][u];
+			}
+		}
+		// 平均点を表示
+		System.out.println("全テストの平均点は" + sum4 / (num * 4) + "です。");
 	}
 }

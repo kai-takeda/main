@@ -20,26 +20,21 @@ public class Qes_5 {
 		01 * 09 = 009 || 02 * 09 = 018 || 03 * 09 = 027 || 04 * 09 = 036 || 05 * 09 = 045 || 06 * 09 = 054 || 07 * 09 = 063 || 08 * 09 = 072 || 09 * 09 = 081 || 010 * 09 = 090 || 011 * 09 = 099 || 012 * 09 = 108 || 013 * 09 = 117 || 014 * 09 = 126 || 015 * 09 = 135 || 016 * 09 = 144 || 017 * 09 = 153 || 018 * 09 = 162 || 019 * 09 = 171 || 020 * 09 = 180
 		 */
 		
-		// 計算ようの配列を作成
-		int[] nums = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-		int[] nums1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
-
-
-		// 掛け算の九九をfor文で作成
-		for (int num : nums) {
-			for (int num1 : nums1) {
+		// 計算用の数字をfor文で獲得
+		for (int i = 1; i < 10; i++) {
+			for (int j = 1; j < 21; j++) {
 				
 				// 最小文字数を２桁に設定、満たない場合は左に0をつける
 				// num1の値が10より小さい場合num1を２桁に
-				if (num1 < 10) {
-					System.out.print(String.format("%02d * %02d = %03d", num1, num, num * num1));
-				
+				if (j < 10) {
+					System.out.print(String.format("%02d * %02d = %03d", j, i, i * j));
+					
 				// それ以外の場合num1を３桁に
 				} else {
-					System.out.print(String.format("%03d * %02d = %03d", num1, num, num * num1));
+					System.out.print(String.format("%03d * %02d = %03d", j, i, i * j));
 				}
 				// 一番右の||は削除
-				if (num1 == 20) {
+				if (j == 20) {
 					continue;
 				}
 				// 計算式の間に||を入力
@@ -48,7 +43,6 @@ public class Qes_5 {
 			// 改行処理
 			System.out.println();
 		}
-
 	}
 
 }
