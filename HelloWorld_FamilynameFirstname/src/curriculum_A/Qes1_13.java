@@ -224,11 +224,5 @@ public class Qes1_13 {
 		System.out.println(bool == ((age3>25) || (height3>160)));
 		// 改行コード
 		System.out.println("\n");
-		
-		
- 
-
-		
 	}
-
 }
