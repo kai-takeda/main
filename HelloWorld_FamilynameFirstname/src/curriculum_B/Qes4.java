@@ -20,20 +20,24 @@ public class Qes4 {
 		08 * 01 = 08 || 08 * 02 = 16 || 08 * 03 = 24 || 08 * 04 = 32 || 08 * 05 = 40 || 08 * 06 = 48 || 08 * 07 = 56 || 08 * 08 = 64 || 08 * 09 = 72
 		09 * 01 = 09 || 09 * 02 = 18 || 09 * 03 = 27 || 09 * 04 = 36 || 09 * 05 = 45 || 09 * 06 = 54 || 09 * 07 = 63 || 09 * 08 = 72 || 09 * 09 = 81
 		 */
-
+		
+		// 計算に用いる配列を作成
 		int[] nums = {1, 2, 3, 4, 5, 6, 7, 8, 9};
 		int[] nums1 = {1, 2, 3, 4, 5, 6, 7, 8, 9};
 
 		// 掛け算の九九をfor文で作成
-		for (int num:nums) {
-			for (int num1:nums1) {
+		for (int num : nums) {
+			for (int num1 : nums1) {
+				
 				// 最小文字数を２桁に設定、満たない場合は左に0をつける
-				System.out.print(String.format("%02d * %02d = %02d", num, num1, num*num1));
+				System.out.print(String.format("%02d * %02d = %02d", num, num1, num * num1));
 				if (num1 == 9) {
 					continue;
 				}
+				// 計算の間に||をつける
 				System.out.print(" || ");
 			}
+			// 改行を挿入
 			System.out.println();
 		}
 	}

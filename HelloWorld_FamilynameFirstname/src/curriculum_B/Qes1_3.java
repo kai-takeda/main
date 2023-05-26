@@ -58,46 +58,66 @@ public class Qes1_3 {
 
 		// 変数judgeにtrueを代入
 		boolean judge = true;
-		// scannerで入力した値を取得
+		
+		// Scannerで入力した値を取得
 		Scanner scanner = new Scanner(System.in);
+		
 		// 正規表現パターンの読み込み、半角英数字の判定を行う
 		boolean result;
 
 		// Random関数を使う
 		Random rand = new Random();
+		
 		// ジャンケンの回数をカウントする変数を作成
 		int count = 0;
-
-		// nameが１０文字以上の場合「名前を１０文字以内にしてください」と表示
-		// nameが空文字の場合「名前を入力してください」と表示
-		// 正常だった場合「ユーザー名「入力したユーザー名」を登録しました」と表示
-		// 半角英数字でない場合「半角英数字のみで名前を入力してください」と表示
-		while(judge) {
+		
+		// 繰り返し処理
+		while (judge) {
+			
+			// 名前を入力してもらい正規表現で判別
 			String name = scanner.nextLine().trim();
 			Pattern p1 = Pattern.compile("^[A-Za-z0-9]+$"); 
+			
+			// null判定
 			if (Objects.isNull(name)) {
 				System.out.println("名前を入力してください");
 				continue;
+			
+			// 名前が入力された場合
 			} else {
+				
+				// 入力した値を正規表現とマッチするかを変数に代入
 				Matcher m1 = p1.matcher(name); 
 				result = m1.matches();
+				
+				// nameが空文字の場合「名前を入力してください」と表示
 				if (name.length() <= 0) {
 					System.out.println("名前を入力してください");
 					continue;
+					
+				// nameが１０文字以上の場合「名前を１０文字以内にしてください」と表示	
 				} else if (name.length()  > 10) {
 					System.out.println("名前を１０文字以内にしてください");
 					continue;
-				} else if (!result){
+					
+				// 半角英数字でない場合「半角英数字のみで名前を入力してください」と表示	
+				} else if (!result) {
 					System.out.println("半角英数字のみで名前を入力してください");
 					continue;
+					
+				// 正常だった場合「ユーザー名「入力したユーザー名」を登録しました」と表示
 				} else {
 					System.out.println("ユーザー名「" + name + "」を登録しました");
+					
 					// じゃんけん対決ゲームを作成
 					// 手の種類を配列で作成
-					while(judge) {
+					while (judge) {
 						String[] hands = {"グー", "チョキ", "パー"};
+						
+						// 出す手を促す文を表示
 						System.out.println("出す手を決めてください");
 						System.out.println("0が「グー」、１が「チョキ」、２が「パー」です");
+						
 						// 出す手を取得
 						int num = scanner.nextInt();
 						String myHand = hands[num];
@@ -110,46 +130,48 @@ public class Qes1_3 {
 						// それぞれが出した手を表示
 						System.out.println(name + "の手は" + myHand);
 						System.out.println("相手の手は" + enemyHand);
-						// ジャンケンの処理
+						
 						// あいこの場合
 						if (myHand.equals(enemyHand)) {
 							System.out.println("Draw あいこ　もう一回しましょう！");
 							count++;
-							// 自分がグーの場合の処理	
+							
+						// 負けた時の処理
 						} else if ((myHand.equals("グー")&&enemyHand.equals("パー")) || (myHand.equals("チョキ")&&enemyHand.equals("グー")) || (myHand.equals("パー")&&enemyHand.equals("チョキ"))) {
-							if(enemyHand == "パー") {
+							
+							// 自分がグーの場合の処理
+							if (enemyHand == "パー") {
 								System.out.println("俺の勝ち");
 								System.out.println("なんで負けたか、明日までに考えといてください");
 								System.out.println("そしたら何かが見えてくるはずです");
 								count++;
 
-								// 自分がチョキの場合の処理
-							} else if (enemyHand== "グー") {
-
+							// 自分がチョキの場合の処理
+							} else if (enemyHand == "グー") {
 								System.out.println("俺の勝ち");
 								System.out.println("負けは次につながるチャンスです");
 								System.out.println("ネバーギブアップ");
 								count++;
 
-								// 自分がパーの場合の処理
-							} else if(enemyHand == "チョキ") {
+							// 自分がパーの場合の処理
+							} else if (enemyHand == "チョキ") {
 								System.out.println("俺の勝ち");
 								System.out.println("たかがジャンケン、そう思ってないですか？");
 								System.out.println("それやったら次も、俺が勝ちますよ");
 								count++;
+								
 							}
+						// 勝った時の処理
 						} else {
 							System.out.println("やるやん");
 							System.out.println("次は俺にリベンジさせて");
 							count++;
-							break;	
+							judge = false;
 						}
 					}
 					// ジャンケンの回数を表示
-					System.out.println("勝つまでにかかった合計回数は"+count+"回です");
-					break;
+					System.out.println("勝つまでにかかった合計回数は" + count + "回です");
 				}
-
 			}
 		} 
 

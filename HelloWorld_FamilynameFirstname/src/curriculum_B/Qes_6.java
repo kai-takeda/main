@@ -25,10 +25,12 @@ public class Qes_6 {
 		Random rand = new Random();
 
 		try {
+			//繰り返し処理を行う
 			while (scanner.hasNext()) {
 
 				// 入力した文字列を取得
 				String items = scanner.next();
+				
 				//  、で分ける
 				scanner.useDelimiter("、");
 
@@ -36,38 +38,52 @@ public class Qes_6 {
 				String[] item = items.split("、");
 
 				// 配列itemから一つずつみる
-				for (String buyItem:item) {
+				for (String buyItem : item) {
 					switch(buyItem) {
+					
+					// パソコンの場合
 					case "パソコン":
 						int num = rand.nextInt(11);
 						System.out.println(buyItem + "の残り台数は" + num + "台です。");
 						System.out.println();
 						continue;
+						
+					// 冷蔵庫の場合	
 					case "冷蔵庫":
 						int num1 = rand.nextInt(11);
 						System.out.println(buyItem + "の残り台数は" + num1 + "台です。");
 						System.out.println();
 						continue;
+						
+					// 扇風機の場合	
 					case "扇風機":
 						int num2 = rand.nextInt(11);
 						System.out.println(buyItem + "の残り台数は" + num2 + "台です。");
 						System.out.println();
 						continue;
+						
+					// 洗濯機の場合	
 					case "洗濯機":
 						int num3 = rand.nextInt(11);
 						System.out.println(buyItem + "の残り台数は" + num3 + "台です。");
 						System.out.println();
 						continue;
+						
+					// 加湿器の場合	
 					case "加湿器":
 						int num4 = rand.nextInt(11);
 						System.out.println(buyItem + "の残り台数は" + num4 + "台です。");
 						System.out.println();
 						continue;
+						
+					// テレビ、ディスプレイの場合	
 					case "テレビ", "ディスプレイ":
 						int num5 = rand.nextInt(11);
 						System.out.println(buyItem + "の残り台数は" + num5 + "台です。");
 						System.out.println();
 						continue;
+						
+					//	それ以外の場合
 					default:
 						System.out.println("『" + buyItem + "』は指定の商品ではありません。");
 						System.out.println();
@@ -77,6 +93,5 @@ public class Qes_6 {
 		} finally {
 			scanner.close();
 		}
-
 	}
 }
