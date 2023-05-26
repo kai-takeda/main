@@ -44,7 +44,6 @@ public class Main {
             
         // 正常に動いた場合
 		} else {
-			
 			// 情報を表示
 		    person1.print();
 		}
