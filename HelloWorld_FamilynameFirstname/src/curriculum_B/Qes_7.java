@@ -24,19 +24,23 @@ public class Qes_7 {
 		// 生徒の数の要素を持つ配列を作成
 		int[][] member = new int[num][4];
 		// 生徒のそれぞれの教科の点数を入力
-		for (int i = 1; i<=num; i++) {
+		for (int i = 1; i <= num; i++) {
 			System.out.println(i + "人目の『英語』の点数を入力してください:");
 			int scoreE = scanner.nextInt();
 			member[i-1][0] = scoreE;
+			
 			System.out.println(i + "人目の『数学』の点数を入力してください:");
 			int scoreM = scanner.nextInt();
 			member[i-1][1] = scoreM;
+			
 			System.out.println(i + "人目の『理科』の点数を入力してください:");
 			int scoreS = scanner.nextInt();
 			member[i-1][2] = scoreS;
+			
 			System.out.println(i + "人目の『社会』の点数を入力してください:");
 			int scoreJ = scanner.nextInt();
 			member[i-1][3] = scoreJ;
+			
 			System.out.println();
 		}
 		// for文で値を取り出し平均点を求める
