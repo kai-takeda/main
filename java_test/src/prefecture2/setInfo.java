@@ -1,6 +1,8 @@
 package prefecture2;
 
 public class setInfo {
+	
+	// クラスフィールドの設定
 	private int ind;
 	private String prefecture;
 	private String city;

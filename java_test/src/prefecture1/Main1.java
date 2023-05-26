@@ -6,8 +6,7 @@ public class Main1 {
 	
 	// メイン処理
 	public static void main(String[] args) {
-		
-		// clipクラスをインスタス化して使用。
+		// Fightクラスをインスタス化して使用。
 		Fight f = new Fight();
 		f.g();
 	}

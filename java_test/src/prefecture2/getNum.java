@@ -10,8 +10,8 @@ public class getNum {
 		// 数字を入力してもらう処理
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("数字を入力してください(0-11の間)");
+		// 数字を文字列として受けとる
 		String numberS = scanner.nextLine();
-		
 		// 入力した数字を,で分割する
 		String[] numbers = numberS.split(",");
 		

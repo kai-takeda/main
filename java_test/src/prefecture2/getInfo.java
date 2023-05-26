@@ -79,7 +79,6 @@ public class getInfo {
 		info11.setCity("さいたま市");
 		info11.setSize(3798);
 		
-		
 		// getterを用いて値を取得しmapに格納
 		map.put(info1.getInd(), info1.getPrefecture() + "," + info1.getCity() + "," + info1.getSize());
 		map.put(info2.getInd(), info2.getPrefecture() + "," + info2.getCity() + "," + info2.getSize());

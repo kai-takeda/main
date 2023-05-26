@@ -21,7 +21,7 @@ public class getOrder {
 		} else if(order.equals("降順")) {
 			b = "降順";
 			
-		// それ以外
+		// それ以外の時はどちらかを入力してもらうよう促す
 		} else {
 			System.out.println("昇順か降順を入力してください。");
 		}
