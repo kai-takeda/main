@@ -34,6 +34,7 @@ public class Person {
 	public int age;
 	public double height;
 	public double weight;
+	
 	// コンストラクタを定義
 	public Person(String name, int age, double height, double weight) {
 		Person.count++;
@@ -42,19 +43,21 @@ public class Person {
 		this.height = height;
 		this.weight = weight;
 	}
+	
 	// bmiメソッドを定義
 	public double bmi() {
 	    return this.weight / this.height / this.height;
 	  }
+	
 	// 人物の情報を表示するprintメソッドを定義
 	public void print() {
 		System.out.println("名前は" + this.name + "です");
 		System.out.println("年は" + this.age + "です");
 		System.out.println("BMIは" + String.format("%.1f", this.bmi()) + "です");
 	}
+	
 	// 生成されたインスタンスの数を表示するprintCountメソッドを定義
 	public static void printCount() {
 		System.out.println("合計は" + Person.count + "人です");
 	}
-
 }
