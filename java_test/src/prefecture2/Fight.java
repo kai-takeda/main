@@ -14,7 +14,7 @@ public class Fight {
 		// インスタンス化する
 		getInfo gI = new getInfo();
 		getNum n = new getNum();
-		getOrder gO = new getOrder(); 
+		getOrder gO = new getOrder();
 
 		// マップクラスを使用
 		Map<Integer, String> map1 = new HashMap<>();
@@ -47,8 +47,7 @@ public class Fight {
 						// 都道府県、県庁所在地、面積に分けて表示、最後に改行
 						System.out.println("都道府県：" + obj[0]);
 						System.out.println("県庁所在地：" + obj[1]);
-						System.out.println("面積" + obj[2] + "km2");
-						System.out.println("");
+						System.out.println("面積：" + obj[2] + "km2\n");
 					}
 				}
 			}	
@@ -60,16 +59,16 @@ public class Fight {
 			// 入力された数字を降順に並び替える
 			for (int f = 0, l = nums.length - 1; f < l; f++, l--){
 				int temp = nums[f];
-				nums[f]  = nums[l];
+				nums[f] = nums[l];
 				nums[l] = temp;
 			}
 			
 			// 降順にするための処理
 			Collections.sort(list_entries, new Comparator<Entry<Integer, String>>() {
-				//compareを使用して値を比較する
+				// compareを使用して値を比較する
 				public int compare(Entry<Integer, String> obj1, Entry<Integer, String> obj2)
 				{
-					//降順の処理
+					// 降順の処理
 					return obj2.getKey().compareTo(obj1.getKey());
 				}
 			});
@@ -82,11 +81,10 @@ public class Fight {
 					if(entrys.getKey() == nums[e]) {
 						// 値を,で分割する
 						String[] obj = entrys.getValue().split(",");
-						// // 都道府県、県庁所在地、面積に分けて表示、最後に改行
+						// 都道府県、県庁所在地、面積に分けて表示、最後に改行
 						System.out.println("都道府県：" + obj[0]);
 						System.out.println("県庁所在地：" + obj[1]);
-						System.out.println("面積" + obj[2] + "km2");
-						System.out.println("");
+						System.out.println("面積：" + obj[2] + "km2\n");
 					}
 				}
 			}
