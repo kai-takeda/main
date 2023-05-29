@@ -57,7 +57,7 @@ public class Qes_7 {
 		// for文で値を取り出し平均点を求める
 		for (int j = 1; j <= num; j++) {
 			double average = Arrays.stream(member[j-1]).average().getAsDouble();
-			System.out.println(j+"人目の平均点は" + average + "です。");
+			System.out.println(j + "人目の平均点は" + average + "です。");
 		}
 		System.out.println();
 		
@@ -82,6 +82,6 @@ public class Qes_7 {
 			}
 		}
 		// 平均点を表示
-		System.out.println("全テストの平均点は" + sum4 / (num * 4) + "です。");
+		System.out.println("全体の平均点は" + sum4 / (num * 4) + "点です。");
 	}
 }
